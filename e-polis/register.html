@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+	
+	
+	
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E-Polis - Ishonch Sug'urta</title>
+  <meta content="E-Polis" name="description">
+  <meta content="E-Polis" name="keywords">
+
+  <link href="favicon.ico" rel="icon">
+
+  <link href="../style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../style/vendor/calendar/css/bootstrap-datepicker.css" rel="stylesheet">
+  <link href="../style/vendor/icofont/icofont.min.css" rel="stylesheet"> 
+  
+   
+  	<link href="style/css/style.css" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+</head>
+<body> 
+
+	<main id="main">
+	<section>
+	<div class="container" data-aos="fade-up"> 
+		
+		<form action="epolis" method="post" class="mainForm">
+	    <input type="hidden" name="cn" value="Osgo"/>
+		<input type="hidden" name="act" value="Summary" id="act"/>
+		<input type="hidden" name="lang" value="uzl"/>
+		<input type="hidden" name="adsk" value=""/>
+
+		<div class="row justify-content-center">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 osgoForm">
+
+				<div class="row justify-content-center">
+				<div class="col-12 text-center">
+					
+					<img src="../../SystemResurce/assets/img/logo.png" class="img-fluid" alt="">
+					<h1>E-Polis</h1>
+					<h2>Transport vositalari egalarining fuqarolik javobgarligini majburiy sug‘urtalash</h2>
+					
+					<small class="form-text"></small>
+				</div>
+				</div>
+				
+				
+
+				
+
+				<h3><i class="icofont-calendar"></i> Sug‘urta muddati</h3>
+
+				<div class="form-row justify-content-center"> 
+
+					<div class="form-group col-12"> 
+						<label for="period">muddat</label>
+						<select class="form-control" name="period" id="period"> 
+							<option selected value="1">1 yil</option> 
+							<option  value="2">6 oy</option>
+							<option  value="3">Ro‘yxatdan o‘tish joyigacha(10 kun)</option>
+						</select> 
+					</div>
+		 
+					<div class="form-group col-6"> 
+						<label  for="databegin">boshlanishi</label>
+						<div class="input-group date" data-provide="datepicker">
+							<input type="text" class="form-control" aria-describedby="i_databegin" name="databegin" id="databegin" data-type="data" value="04-02-2022" aria-describedby="databegin-addon">
+							<div class="input-group-append">
+								<span class="input-group-text" id="databegin-addon">
+									<i class="icofont-ui-calendar"></i>
+								</span>
+							</div>
+						</div> 
+						<small id="i_databegin" class="form-text"></small>
+					</div>
+
+					<div class="form-group col-6"> 
+						<label for="dataend">tugashi</label>
+						<div class="input-group date" data-provide="datepicker">
+							<input type="text" class="form-control" aria-describedby="i_dataend" name="dataend" id="dataend" data-type="data" value="03-02-2023" aria-describedby="dataend-addon">
+							<div class="input-group-append">
+								<span class="input-group-text" id="dataend-addon">
+									<i class="icofont-ui-calendar"></i>
+								</span>
+							</div>
+						</div>
+						<small id="i_dataend" class="form-text"></small>
+					</div> 
+
+				</div>	
+
+				<h3><i class="icofont-auto-mobile"></i> Transport vositasining texnik pasporti</h3>
+				<small class="form-text"></small>
+
+				<div class="form-row justify-content-center">  
+
+				  <div class="form-group col-12">
+					<label for="tRegNum">davlat raqami</label>
+					<input type="text" class="form-control" id="tRegNum" name="tRegNum" value="" aria-describedby="i_tRegNum"> 
+					<small id="i_tRegNum" class="form-text"></small>
+				  </div> 
+
+				  <div class="form-group col-6">
+					<label for="tPasSer">seriya</label>
+					<input type="text" class="form-control" id="tPasSer" name="tPasSer" value="" aria-describedby="i_tPasSer"> 
+					<small id="i_tPasSer" class="form-text"></small>
+				  </div>
+
+				  <div class="form-group col-6">
+					<label for="tPasNum">nomer</label>
+					<input type="text" class="form-control" id="tPasNum" name="tPasNum" value="" aria-describedby="i_tPasNum"> 
+					<small id="i_tPasNum" class="form-text"></small>
+				  </div>
+
+				</div>
+
+				<h3><i class="icofont-man-in-glasses"></i> Ariza beruvchi</h3>
+				<small class="form-text"></small>
+
+				<div class="form-row justify-content-center"> 
+					<div class="form-group col-12"> 
+						<label for="appResident">Sizning holatingiz</label>
+						<select class="form-control" id="appResident" name="appResident">
+							<option  value="1">O‘zbekiston fuqarosi</option>
+							<option  value="2">Chet-el fuqarosi</option>
+							<option  value="3">Fuqarolik yo‘q</option>
+							<option  value="4">Xarbiy</option>
+							<option  value="5">Chet-el rezidenti</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-row justify-content-center">
+				<div class="form-group col-12"> 
+					<label for="sPhone">Telefon raqamingiz</label>
+					<input type="text" class="form-control" id="sPhone" name="sPhone" value="+998(99) 413-00-11" aria-describedby="i_sPhone" data-type="phone"> 
+					<small id="i_sPhone" class="form-text"></small>
+				</div>
+				</div>
+
+				<div class="form-row justify-content-center">
+				<div class="form-group col-12"> 
+					<label for="sForm">Siz :</label>
+					<select class="form-control" id="sForm" name="sForm" aria-describedby="i_sForm">
+						<option  value="1">jismoniy shaxs</option>
+						<option  value="2">yuridik shaxs</option> 
+					</select>
+					<small id="i_sForm" class="form-text"></small>
+				</div>
+				</div>
+
+				<div class="form-row justify-content-center sForm sForm1">
+
+				  <div class=" col-12">
+						<label>Sizning pasportingiz ma'lumotlari</label>
+				  </div>
+
+				  <div class="form-group col-6">
+					<label for="sPasSer">seriya (lotin yozuvida)</label>
+					<input type="text" class="form-control" name="sPasSer" id="sPasSer" value="" aria-describedby="i_sPasSer">
+					<small id="i_sPasSer" class="form-text"></small>
+				  </div>
+
+				  <div class="form-group col-6">
+					<label for="sPasNum">nomer</label>
+					<input type="text" class="form-control" name="sPasNum" id="sPasNum" value="" aria-describedby="i_sPasNum">
+					<small id="i_sPasNum" class="form-text"></small>
+				  </div>
+
+				   <div class="form-group col-12">
+					<label for="sPasPnfl">PINFL</label>
+					<input type="text" class="form-control" name="sPasPnfl" id="sPasPnfl" value="" data-type="pnfl" aria-describedby="i_sPasPnfl">
+					<small id="i_sPasPnfl" class="form-text"></small>
+				  </div>
+
+				</div>
+
+				<div class="form-row justify-content-center sForm sForm2">
+				  
+				  <div class="col-12">
+						<label>Yuridik shaxs haqida ma'lumotlar</label> 
+				  </div>  
+				  <div class="w-100"></div>
+				  
+				  <div class="form-group col-12">
+					<label for="sInn">INN</label>
+					<input type="text" class="form-control" id="sInn" name="sInn" value="" data-type="inn" aria-describedby="i_sInn">
+					<small id="i_sInn" class="form-text"></small>
+				  </div>
+				  
+				</div> 
+				
+				<div class="form-row justify-content-center">  
+				<div class="form-group col-12"> 
+					 <label>Siz transport vositasining egasimisiz :</label>
+					<div class="form-check">	
+						  <input class="form-check-input" type="checkbox" name="isOwner" id="isOwner" value="1" checked >
+						  <label class="form-check-label" for="isOwner">Ha</label> 
+					</div>  
+				</div>
+				</div>
+				
+				<h3 class="Owner"><i class="icofont-business-man"></i> Transport vositasining egasi</h3>
+				<small class="form-text"></small>
+
+				<div class="form-row justify-content-center Owner">  
+				<div class="form-group col-12">
+					<label for="oForm">shakli :</label>
+					<select class="form-control" id="oForm" name="oForm" aria-describedby="i_oForm">
+						<option  value="1">jismoniy shaxs</option>
+						<option  value="2">yuridik shaxs</option> 
+					</select> 
+					<small id="i_oForm" class="form-text"></small>
+				</div>
+				</div>	
+
+				<div class="form-row justify-content-center Owner oForm oForm1">   
+				
+				   <div class="form-group col-6">
+					<label for="oPasSer">seriya (lotin yozuvida)</label>
+					<input type="text" class="form-control" name="oPasSer" id="oPasSer" value="" aria-describedby="i_oPasSer">
+					<small id="i_oPasSer" class="form-text"></small>
+				  </div>
+				  
+				  <div class="form-group col-6">
+					<label for="oPasNum">nomer</label>
+					<input type="text" class="form-control" name="oPasNum" id="oPasNum" value="" aria-describedby="i_oPasNum">
+					<small id="i_oPasNum" class="form-text"></small>
+				  </div>
+				  
+				   <div class="form-group col-12">
+					<label for="oPasPnfl">PINFL</label>
+					<input type="text" class="form-control" name="oPasPnfl" id="oPasPnfl" value="" data-type="pnfl" aria-describedby="i_oPasPnfl">
+					<small id="i_oPasPnfl" class="form-text"></small>
+				  </div>
+				  
+				</div>
+
+				<div class="form-row justify-content-center Owner oForm oForm2">
+				  
+				  <div class="form-group col-12">
+					<label for="oInn">INN</label>
+					<input type="text" class="form-control" id="oInn" name="oInn" value="" data-type="inn" aria-describedby="i_oInn">
+					<small id="i_oInn" class="form-text"></small>
+				  </div> 
+				  
+				</div> 
+
+				<h3><i class="icofont-police"></i> Haydovchilar</h3>				
+
+				<div class="form-row justify-content-center">
+					<div class="form-group col-12"> 
+						<label for="driverCount">Transport vositasining boshqaradigan shaxslar soni</label>
+						<select class="form-control" id="driverCount" name="driverCount" aria-describedby="i_driverCount">
+							<option value="0"></option>
+							<option  value="1">1</option>
+							<option  value="2">2</option>
+							<option  value="3">3</option>
+							<option  value="4">4 </option>
+							<option  value="5">5</option>
+							<option  value="6">Cheklanmagan</option>
+						</select> 
+						<small id="i_driverCount" class="form-text"></small>
+					</div>
+				</div>
+
+			
+				<h3 class="Driver Driver1"><i class="icofont-police"></i> Haydovchi № 1</h3>
+				<small class="form-text"></small>
+			
+				<div class="form-row justify-content-center Driver Driver1">
+					  
+					  <div class="form-group col-6">
+						<label for="d1PasSer">pasport seriya (lotin yozuvida)</label> 
+						<input type="text" class="form-control" name="d1PasSer" id="d1PasSer" value="" aria-describedby="i_d1PasSer">
+						<small id="i_d1PasSer" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d1PasNum">pasport nomeri</label> 
+						<input type="text" class="form-control" name="d1PasNum" id="d1PasNum" value="" aria-describedby="i_d1PasNum">
+						<small id="i_d1PasNum" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d1PasPnfl">PINFL <a href=""><span class="badge badge-secondary">?</span></a></label>
+						<input type="text" class="form-control" name="d1PasPnfl" id="d1PasPnfl" value="" data-type="pnfl" aria-describedby="i_d1PasPnfl">
+						<small id="i_d1PasPnfl" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6"> 
+						<label for="d1Reletion">Qarindoshlik darajasi</label> 
+							<select class="form-control" id="d1Reletion" name="d1Reletion">
+							    <option value="0">qarindosh emas</option>
+								<option   value="1">Ota</option>
+								<option   value="2">Ona</option>
+								<option   value="3">Er</option>
+								<option   value="4">Xotin</option>
+								<option   value="5">O‘g‘il</option>
+								<option   value="6">Qiz</option>
+								<option   value="7">Aka</option>
+								<option   value="8">Uka</option>
+								<option   value="9">Opa</option>
+								<option  value="10">Singil</option>
+							</select> 
+					  </div> 
+				</div>
+			
+				<h3 class="Driver Driver2"><i class="icofont-police"></i> Haydovchi № 2</h3>
+				<small class="form-text"></small>
+			
+				<div class="form-row justify-content-center Driver Driver2">
+					  
+					  <div class="form-group col-6">
+						<label for="d2PasSer">pasport seriya (lotin yozuvida)</label> 
+						<input type="text" class="form-control" name="d2PasSer" id="d2PasSer" value="" aria-describedby="i_d2PasSer">
+						<small id="i_d2PasSer" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d2PasNum">pasport nomeri</label> 
+						<input type="text" class="form-control" name="d2PasNum" id="d2PasNum" value="" aria-describedby="i_d2PasNum">
+						<small id="i_d2PasNum" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d2PasPnfl">PINFL <a href=""><span class="badge badge-secondary">?</span></a></label>
+						<input type="text" class="form-control" name="d2PasPnfl" id="d2PasPnfl" value="" data-type="pnfl" aria-describedby="i_d2PasPnfl">
+						<small id="i_d2PasPnfl" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6"> 
+						<label for="d2Reletion">Qarindoshlik darajasi</label> 
+							<select class="form-control" id="d2Reletion" name="d2Reletion">
+							    <option value="0">qarindosh emas</option>
+								<option   value="1">Ota</option>
+								<option   value="2">Ona</option>
+								<option   value="3">Er</option>
+								<option   value="4">Xotin</option>
+								<option   value="5">O‘g‘il</option>
+								<option   value="6">Qiz</option>
+								<option   value="7">Aka</option>
+								<option   value="8">Uka</option>
+								<option   value="9">Opa</option>
+								<option  value="10">Singil</option>
+							</select> 
+					  </div> 
+				</div>
+			
+				<h3 class="Driver Driver3"><i class="icofont-police"></i> Haydovchi № 3</h3>
+				<small class="form-text"></small>
+			
+				<div class="form-row justify-content-center Driver Driver3">
+					  
+					  <div class="form-group col-6">
+						<label for="d3PasSer">pasport seriya (lotin yozuvida)</label> 
+						<input type="text" class="form-control" name="d3PasSer" id="d3PasSer" value="" aria-describedby="i_d3PasSer">
+						<small id="i_d3PasSer" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d3PasNum">pasport nomeri</label> 
+						<input type="text" class="form-control" name="d3PasNum" id="d3PasNum" value="" aria-describedby="i_d3PasNum">
+						<small id="i_d3PasNum" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d3PasPnfl">PINFL <a href=""><span class="badge badge-secondary">?</span></a></label>
+						<input type="text" class="form-control" name="d3PasPnfl" id="d3PasPnfl" value="" data-type="pnfl" aria-describedby="i_d3PasPnfl">
+						<small id="i_d3PasPnfl" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6"> 
+						<label for="d3Reletion">Qarindoshlik darajasi</label> 
+							<select class="form-control" id="d3Reletion" name="d3Reletion">
+							    <option value="0">qarindosh emas</option>
+								<option   value="1">Ota</option>
+								<option   value="2">Ona</option>
+								<option   value="3">Er</option>
+								<option   value="4">Xotin</option>
+								<option   value="5">O‘g‘il</option>
+								<option   value="6">Qiz</option>
+								<option   value="7">Aka</option>
+								<option   value="8">Uka</option>
+								<option   value="9">Opa</option>
+								<option  value="10">Singil</option>
+							</select> 
+					  </div> 
+				</div>
+			
+				<h3 class="Driver Driver4"><i class="icofont-police"></i> Haydovchi № 4</h3>
+				<small class="form-text"></small>
+			
+				<div class="form-row justify-content-center Driver Driver4">
+					  
+					  <div class="form-group col-6">
+						<label for="d4PasSer">pasport seriya (lotin yozuvida)</label> 
+						<input type="text" class="form-control" name="d4PasSer" id="d4PasSer" value="" aria-describedby="i_d4PasSer">
+						<small id="i_d4PasSer" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d4PasNum">pasport nomeri</label> 
+						<input type="text" class="form-control" name="d4PasNum" id="d4PasNum" value="" aria-describedby="i_d4PasNum">
+						<small id="i_d4PasNum" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d4PasPnfl">PINFL <a href=""><span class="badge badge-secondary">?</span></a></label>
+						<input type="text" class="form-control" name="d4PasPnfl" id="d4PasPnfl" value="" data-type="pnfl" aria-describedby="i_d4PasPnfl">
+						<small id="i_d4PasPnfl" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6"> 
+						<label for="d4Reletion">Qarindoshlik darajasi</label> 
+							<select class="form-control" id="d4Reletion" name="d4Reletion">
+							    <option value="0">qarindosh emas</option>
+								<option   value="1">Ota</option>
+								<option   value="2">Ona</option>
+								<option   value="3">Er</option>
+								<option   value="4">Xotin</option>
+								<option   value="5">O‘g‘il</option>
+								<option   value="6">Qiz</option>
+								<option   value="7">Aka</option>
+								<option   value="8">Uka</option>
+								<option   value="9">Opa</option>
+								<option  value="10">Singil</option>
+							</select> 
+					  </div> 
+				</div>
+			
+				<h3 class="Driver Driver5"><i class="icofont-police"></i> Haydovchi № 5</h3>
+				<small class="form-text"></small>
+			
+				<div class="form-row justify-content-center Driver Driver5">
+					  
+					  <div class="form-group col-6">
+						<label for="d5PasSer">pasport seriya (lotin yozuvida)</label> 
+						<input type="text" class="form-control" name="d5PasSer" id="d5PasSer" value="" aria-describedby="i_d5PasSer">
+						<small id="i_d5PasSer" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d5PasNum">pasport nomeri</label> 
+						<input type="text" class="form-control" name="d5PasNum" id="d5PasNum" value="" aria-describedby="i_d5PasNum">
+						<small id="i_d5PasNum" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6">
+						<label for="d5PasPnfl">PINFL <a href=""><span class="badge badge-secondary">?</span></a></label>
+						<input type="text" class="form-control" name="d5PasPnfl" id="d5PasPnfl" value="" data-type="pnfl" aria-describedby="i_d5PasPnfl">
+						<small id="i_d5PasPnfl" class="form-text"></small>
+					  </div>
+					  
+					  <div class="form-group col-6"> 
+						<label for="d5Reletion">Qarindoshlik darajasi</label> 
+							<select class="form-control" id="d5Reletion" name="d5Reletion">
+							    <option value="0">qarindosh emas</option>
+								<option   value="1">Ota</option>
+								<option   value="2">Ona</option>
+								<option   value="3">Er</option>
+								<option   value="4">Xotin</option>
+								<option   value="5">O‘g‘il</option>
+								<option   value="6">Qiz</option>
+								<option   value="7">Aka</option>
+								<option   value="8">Uka</option>
+								<option   value="9">Opa</option>
+								<option  value="10">Singil</option>
+							</select> 
+					  </div> 
+				</div>
+			
+
+				<h3><i class="icofont-sale-discount"></i> Chegirma</h3>
+			
+				<div class="form-row justify-content-center DiscountAllowed"> 
+					<div class="form-group col-12">
+					
+					  <label>Transport vositasining egasi quyidagi toifadagi shaxs hisoblanadimi ? <a href="#" onclick="$('.discount').show();$('#discount1').focus(); return false;">O‘zgartirish</a></label>
+		  
+					  <div class="form-check discount discount1">
+						<input class="form-check-input" id="discount1" name="discount" type="radio" value="1" checked >
+						<label class="form-check-label" for="discount1">yo‘q</label>
+					  </div>
+					  
+					  <div class="form-check discount discount2">
+						<input class="form-check-input" id="discount2" name="discount" type="radio" value="2"  >
+						<label class="form-check-label" for="discount2">1941-1945 yillardagi urush qatnashchilari yoki partizanlari yoxud ularga tenglashtirilgan shaxslar</label>
+					  </div>
+					  
+					  <div class="form-check discount discount3">
+						<input class="form-check-input" id="discount3" name="discount" type="radio" value="3"  >
+						<label class="form-check-label" for="discount3">1941-1945 yillardagi urush davri mehnat fronti faxriylari</label>
+					  </div>
+					  
+					  <div class="form-check discount discount4">
+						<input class="form-check-input" id="discount4" name="discount" type="radio" value="4"  >
+						<label class="form-check-label" for="discount4">konsentrasion lagerlarning sobiq yosh tutqunlari</label>
+					   </div> 
+					   
+					  <div class="form-check discount discount5">
+						<input class="form-check-input" id="discount5" name="discount" type="radio" value="5"  >
+						<label class="form-check-label" for="discount5">harbiy xizmat majburiyatlarini bajarishda yaralanganligi, kontuziya bo‘lganligi yoki shikastlanganligi oqibatida yoxud frontda bo‘lish bilan bog‘liq kasallik tufayli halok bo‘lgan harbiy xizmatchining ota-onasidan biri yoki boshqa turmush qurmagan bevasi</label>
+					   </div> 
+					   
+					  <div class="form-check discount discount6">
+						<input class="form-check-input" id="discount6" name="discount" type="radio" value="6"  >
+						<label class="form-check-label" for="discount6">chernobil' AESdagi avariya oqibatida jabrlanganlar</label>
+					   </div> 
+					   
+					  <div class="form-check discount discount7">
+						<input class="form-check-input" id="discount7" name="discount" type="radio" value="7"  >
+						<label class="form-check-label" for="discount7">nafaqaxo‘r</label>
+					   </div> 
+					   
+					  <div class="form-check discount discount8">
+						<input class="form-check-input" id="discount8" name="discount" type="radio" value="8"  >
+						<label class="form-check-label" for="discount8">nogiron</label>
+					   </div> 
+					   
+					  <div class="form-check discount discount9">
+						<input class="form-check-input" id="discount9" name="discount" type="radio" value="9"  >
+						<label class="form-check-label" for="discount9">harbiy xizmatchilar hamda o‘quv va tekshiruv yig‘inlariga chaqirilgan harbiy xizmatga majburlar, Afg‘oniston Respublikasida va jangovar harakatlar olib borilayotgan boshqa mamlakatlarda vaqtincha turishgan qo‘shinlarning cheklangan kontingenti tarkibida xizmatni o‘taganlar</label>
+					   </div>
+					   
+					   <small id="i_discount" class="form-text"></small>
+					   
+					</div> 
+				</div>
+				
+				<div class="row justify-content-center btnGroup"> 
+					<div class="col-6 text-right"> 
+						<button class="btn unsBtn" type="button" onclick="$('#act').val('Get'); $('.mainForm').submit();">Orqaga</button>
+					</div>
+					<div class="col-6 text-left"> 
+						<button class="btn unsBtn" type="submit">Tekshirish</button>
+					</div>
+				</div>  
+					
+			</div>
+		</div>
+		</form>
+		
+	</div>
+	</section>
+	</main> 
+
+	<a href="#" class="back-to-top"><i class="icofont-arrow-up"></i></a>
+	<div class="preloader"></div>
+	
+ 	<script type="text/javascript">
+	var g_lang="uzl";
+	</script>
+	
+	<script src="../style/js/jquery.min.js"></script>
+	<script src="../style/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../style/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="../../SystemResurce/assets/vendor/calendar/js/bootstrap-datepicker.js"></script>
+	<script src="../../SystemResurce/assets/vendor/calendar/locales/bootstrap-datepicker.ru.min.js" charset="UTF-8"></script>
+	<script src="../../SystemResurce/assets/vendor/calendar/locales/bootstrap-datepicker.uz-cyrl.min.js" charset="UTF-8"></script>
+	<script src="../../SystemResurce/assets/vendor/calendar/locales/bootstrap-datepicker.uz-latn.min.js" charset="UTF-8"></script>
+	<script src="../style/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="style/js/osgo.js"></script>
+</body>
+</html>

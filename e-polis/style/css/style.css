@@ -1,0 +1,249 @@
+/*** General *********************************************/
+
+body {
+	background: #012251;
+	font-family: 'Roboto', sans-serif;
+	color:#444;
+} 
+ 
+.img-fluid {
+	width:150px;
+	margin-bottom:20px;
+} 
+.form-text {
+	color:Red;
+} 
+
+/*--------------------------------------------------------------
+ Preloader
+--------------------------------------------------------------*/
+.preloaderMin {
+  position: fixed;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+.preloaderMin:before {
+  content: "";
+  position: fixed;
+  border: 2px solid #0880e8;
+  border-top-color: #bfe0fd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+.preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #0880e8;
+  border-top-color: #bfe0fd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*** osgoForm *********************************************/
+
+.osgoForm h1,  .osgoForm h3,  .osgoForm a, .osgoForm a:hover{
+	color: #002b6e;
+}
+.osgoForm {
+	background: #fff;
+	margin:10px 0;
+	padding:40px 40px; 
+	border-radius: 30px;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.osgoForm h1 {
+	font-size: 22px;
+	font-weight: 500; 
+	margin: 10px 0 5px 0;   
+}
+.osgoForm h2 {
+	font-size: 16px; 
+	margin-bottom: 20px;
+} 
+.osgoForm h3 {
+	font-size: 16px;
+	font-weight: 500; 
+	line-height: 2em;  
+	margin-top: 30px;
+}
+.osgoForm h3 i {
+	font-size: 1.8em;
+	color:#ff7900;
+}
+.osgoForm p {
+	font-size: 16px;
+	line-height:1.3em; 
+}
+.osgoForm .label{
+ font-weight:bold; 	
+}
+.osgoForm .value{
+ 
+}
+
+/*** osgoForm *********************************************/
+
+.offer {
+	background: #fff;
+	margin:10px 0;
+	padding:40px 40px; 
+	border-radius: 30px;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.offer h1 {
+	font-size: 16px;
+	font-weight: 500; 
+	margin: 5px 0 10px 0; 
+	text-align:center;	
+}
+.offer h2 {
+	font-size: 14px; 
+	margin: 5px 0 10px 0;
+	text-align:center;		
+} 
+.offer h3 {
+	font-size: 14px;
+	font-weight: 500;  
+	margin: 5px 0px;
+	text-align:center;	
+}
+.offer ul{
+	list-style-type: disc;
+  list-style-position: outside;
+}
+.offer li{
+	font-size: 12px;
+	line-height:1.3em;
+	margin:5px;	
+} 
+.offer p {
+	font-size: 12px;
+	line-height:1.3em;
+	margin:8px;	
+	text-indent: 1.7em;
+}
+.offer td {
+	font-size: 12px;
+	line-height:1.3em; 	
+}
+.offer label {
+	font-size: 12px;
+	line-height:1.3em; 	
+}
+ 
+
+/*** Form imput *********************************************/
+
+label {
+	margin: 0px;
+	padding: 0;
+} 
+.form-control {
+	border-radius: 0;
+}
+.unsBtn {
+	padding:5px 40px;
+	/*background: #fdc602;*/
+	background:#ff7900;
+	color:#fff; 
+}
+.unsBtn:hover { 
+	color:#fff;
+}
+.btnGroup {
+	
+	margin:50px 0;
+}
+
+/**** Back to top button *************************************/
+
+.back-to-top {
+	position: fixed;
+	display: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 3px;
+	right: 10px;
+	bottom: 40px;
+	background: #ffb11b;
+	color: #fff;
+	transition: display 0.5s ease-in-out;
+	z-index: 99999;
+}
+.back-to-top i {
+	font-size: 24px;
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+.back-to-top:hover {
+	color: #fff;
+	background: #ffb11b;
+	transition: background 0.2s ease-in-out;
+}
+
+/*** Form imput ************************************************/
+
+@media (max-width: 1140px) {
+	/*body { background: Red; }*/
+}
+@media (max-width: 960px) {
+	/*body { background: Green; }*/
+}
+@media (max-width: 720px) {
+	/*body { background: Blue;  }*/
+}
+@media (max-width: 540px) {
+	
+	/*body { background: Yellow; }*/
+	label {
+		font-size: 15px; 
+	} 
+	.osgoForm h3 {
+		font-size: 15px;   
+		margin-top: 40px;
+	}
+	.osgoForm h3 i {
+		font-size: 1.6em; 
+	}
+}
